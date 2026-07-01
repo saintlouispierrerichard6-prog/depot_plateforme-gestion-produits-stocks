@@ -16,8 +16,11 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
+         <Hero/>
         {children}
       </body>
+      <Footer/>
+
     </html>
   );
 }
