@@ -1,0 +1,99 @@
+/* ============================
+   BON DE COMMANDE
+   ============================ */
+
+.bon-container {
+  padding: 24px;
+}
+
+.bon-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+/* INFO FOURNISSEUR */
+.fournisseur-box {
+  padding: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.fournisseur-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* TABLEAU COMMANDE */
+.commande-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.commande-table th,
+.commande-table td {
+  border: 1px solid #d9d9d9;
+  padding: 10px;
+}
+
+.commande-table th {
+  background: #f1f1f1;
+}
+
+/* BOUTONS */
+.add-line-btn {
+  background: #16a34a;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-line-btn:hover {
+  background: #128838;
+}
+
+.print-bon-btn {
+  background: #2563eb;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.print-bon-btn:hover {
+  background: #1e4fc7;
+}
+
+/* ============================
+   MEDIA QUERIES
+   ============================ */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .fournisseur-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .bon-title {
+    font-size: 26px;
+  }
+
+  .fournisseur-box {
+    padding: 12px;
+  }
+
+  .commande-table th,
+  .commande-table td {
+    padding: 8px;
+  }
+}
