@@ -15,8 +15,7 @@ import TableCommandesDate from "@/app/components/gestionnaire/TableCommandeDate"
 import ButtonImpression from "@/app/components/ButtonImpression";
 import "./Rapport.css";
 
-
-export default function RapportGestionnaire() {
+export default function RapportGestionnaire(){
   return (
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-6">Rapport Gestionnaire</h1>

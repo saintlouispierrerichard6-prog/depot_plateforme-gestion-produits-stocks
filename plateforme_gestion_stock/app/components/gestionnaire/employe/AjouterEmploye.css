@@ -1,0 +1,93 @@
+.ajouter-employe-container {
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.submit-btn {
+  margin-top: 12px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: #16a34a;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #15803d;
+}
+
+/* 📱 Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .ajouter-employe-container {
+    padding: 16px;
+  }
+
+  .title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* 🖥️ Grand écran (≥ 1024px) */
+@media (min-width: 1024px) {
+  .ajouter-employe-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

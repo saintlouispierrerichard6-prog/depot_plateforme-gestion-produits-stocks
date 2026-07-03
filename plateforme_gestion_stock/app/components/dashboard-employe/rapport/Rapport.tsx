@@ -3,14 +3,14 @@ import "./Rapport.css";
 
 import StatsCard from "@/app/components/StatsCard";
 
-import ChartPerformanceEmploye from "@/app/components/employe/ChartePerformanceEmploye";
-import ChartTacheParJour from "@/app/components/employe/CharteTacheParJour";
-import ChartCommandeParDate from "@/app/components/employe/CharteCommandeParDate";
-import ChartCategorieTravail from "@/app/components/employe/CharteCategorieTravail";
+import ChartPerformanceEmploye from "@/app/components/dashboard-employe/ChartePerformanceEmploye";
+import ChartTacheParJour from "@/app/components/dashboard-employe/CharteTacheParJour";
+import ChartCommandeParDate from "@/app/components/dashboard-employe/CharteCommandeParDate";
+import ChartCategorieTravail from "@/app/components/dashboard-employe/CharteCategorieTravail";
 
-import TableActivitesEmploye from "@/app/components/employe/TableActivitesEmploye";
-import TableCommandesEmploye from "@/app/components/employe/TableCommandesEmploye";
-import TableRotationEmploye from "@/app/components/employe/TableRotationEmploye";
+import TableActivitesEmploye from "@/app/components/dashboard-employe/TableActivitesEmploye";
+import TableCommandesEmploye from "@/app/components/dashboard-employe/TableCommandesEmploye";
+import TableRotationEmploye from "@/app/components/dashboard-employe/TableRotationEmploye";
 
 import ButtonImpression from "@/app/components/ButtonImpression";
 

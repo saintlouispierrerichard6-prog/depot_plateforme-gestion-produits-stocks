@@ -1,5 +1,12 @@
-import RapportEmploye from "@/app/components/dashboard-employe/Rapport";
+import RapportEmploye from "@/app/components/dashboard-employe/rapport/Rapport";
 
 export default function Page() {
-  return <RapportEmploye />;
+
+  return(
+
+    <div>
+        <RapportEmploye />;
+    </div>
+  );
+  
 }

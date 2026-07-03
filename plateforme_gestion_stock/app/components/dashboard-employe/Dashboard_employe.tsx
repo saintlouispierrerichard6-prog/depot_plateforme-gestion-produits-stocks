@@ -1,3 +1,8 @@
+"use client";
+import Link from "next/link";
+import EnvoyerMessage from "./EnvoyerMessage";
+import "./Dashboard_employe.css";
+
 export default function DashboardEmploye() {
   return (
     <div className="w-full p-6 space-y-10">
@@ -38,7 +43,6 @@ export default function DashboardEmploye() {
       ============================ */}
       <div className="space-y-10">
 
-        {/* Graph linéaire */}
         <div>
           <h2 className="text-2xl font-bold mb-4">Activité (Graph Linéaire)</h2>
           <div className="bg-white p-6 rounded-xl shadow">
@@ -46,7 +50,6 @@ export default function DashboardEmploye() {
           </div>
         </div>
 
-        {/* Graph circulaire */}
         <div>
           <h2 className="text-2xl font-bold mb-4">Répartition du Stock (Graph Circulaire)</h2>
           <div className="bg-white p-6 rounded-xl shadow">
@@ -54,7 +57,6 @@ export default function DashboardEmploye() {
           </div>
         </div>
 
-        {/* Graph barre */}
         <div>
           <h2 className="text-2xl font-bold mb-4">Produits manipulés (Graph Barre)</h2>
           <div className="bg-white p-6 rounded-xl shadow">
@@ -81,39 +83,30 @@ export default function DashboardEmploye() {
       {/* ============================
           SECTION: ENVOYER MESSAGE
       ============================ */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4">Envoyer un message au gestionnaire</h2>
-
-        <textarea
-          className="w-full h-32 p-4 border rounded-xl shadow"
-          placeholder="Écrire un message..."
-        ></textarea>
-
-        <button className="mt-4 bg-green-600 text-white px-6 py-3 rounded-xl shadow hover:bg-green-700 transition">
-          Envoyer
-        </button>
-      </div>
+      <EnvoyerMessage />
 
       {/* ============================
           SECTION: BOUTONS QR / PDF / IMPRIMER
       ============================ */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <button className="bg-indigo-600 text-white p-4 rounded-xl shadow hover:bg-indigo-700 transition">
+
+        <Link
+          href="/dashboard/employe/stock/qr"
+          className="bg-indigo-600 text-white p-4 rounded-xl shadow hover:bg-indigo-700 transition block text-center"
+        >
           Générer Code QR
-        </button>
+        </Link>
 
-        <button className="bg-gray-800 text-white p-4 rounded-xl shadow hover:bg-gray-900 transition">
+        <Link
+          href="/dashboard/employe/rapport/imprimer"
+          className="bg-gray-800 text-white p-4 rounded-xl shadow hover:bg-gray-900 transition block text-center"
+        >
           Générer Rapport PDF
-        </button>
-
-        <button className="bg-orange-600 text-white p-4 rounded-xl shadow hover:bg-orange-700 transition">
-          Imprimer Rapport
-        </button>
+        </Link>
       </div>
 
       {/* ============================
           SECTION: STATISTIQUES STOCK
-          (SA OU TE BAY — MWEN KENBE LI)
       ============================ */}
       <h1 className="text-3xl font-bold mb-6">Dashboard Employé (Stock)</h1>
 
@@ -136,30 +129,44 @@ export default function DashboardEmploye() {
 
       {/* ============================
           SECTION: ACTIONS RAPIDES
-          (SA OU TE BAY — MWEN KENBE LI)
       ============================ */}
       <div className="mt-10">
         <h2 className="text-2xl font-bold mb-4">Actions rapides</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <button className="bg-gray-100 p-4 rounded-xl shadow hover:bg-gray-200 transition">
-            Ajouter Stock
-          </button>
-          <button className="bg-gray-100 p-4 rounded-xl shadow hover:bg-gray-200 transition">
-            Modifier Stock
-          </button>
-          <button className="bg-gray-100 p-4 rounded-xl shadow hover:bg-gray-200 transition">
-            Signaler Rupture
-          </button>
-          <button className="bg-gray-100 p-4 rounded-xl shadow hover:bg-gray-200 transition">
-            Voir Livraisons
-          </button>
+
+         <Link
+              href="/dashboard/employe/stock/ajouter"
+              className="bg-gray-100 p-4 rounded-xl shadow hover:bg-gray-200 transition block text-center"
+            >
+              Ajouter Stock
+            </Link>
+
+            <Link
+              href="/dashboard/employe/stock/modifier"
+              className="bg-gray-100 p-4 rounded-xl shadow hover:bg-gray-200 transition block text-center"
+            >
+              Modifier Stock
+            </Link>
+
+            <Link
+              href="/dashboard/employe/stock/rupture"
+              className="bg-gray-100 p-4 rounded-xl shadow hover:bg-gray-200 transition block text-center"
+            >
+              Signaler Rupture
+            </Link>
+
+            <Link
+              href="/dashboard/employe/stock/livraison"
+              className="bg-gray-100 p-4 rounded-xl shadow hover:bg-gray-200 transition block text-center"
+            >
+              Voir Livraisons
+            </Link>
         </div>
       </div>
 
       {/* ============================
           SECTION: HISTORIQUE
-          (SA OU TE BAY — MWEN KENBE LI)
       ============================ */}
       <div className="mt-10">
         <h2 className="text-2xl font-bold mb-4">Historique des actions</h2>
