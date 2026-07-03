@@ -1,0 +1,78 @@
+.date-commande-container {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.filter-box {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.input-date {
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.results-box {
+  margin-top: 20px;
+}
+
+.subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.placeholder {
+  color: #666;
+}
+
+/* 📱 Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .date-commande-container {
+    padding: 14px;
+  }
+
+  .title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+/* 🖥️ Grand écran (≥ 1024px) */
+@media (min-width: 1024px) {
+  .date-commande-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+}

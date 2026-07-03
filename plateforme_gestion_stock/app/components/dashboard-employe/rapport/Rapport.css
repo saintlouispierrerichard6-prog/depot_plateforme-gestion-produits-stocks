@@ -1,0 +1,82 @@
+/* ============================
+   RAPPORT EMPLOYÉ
+   ============================ */
+
+.rapport-employe-container {
+  padding: 24px;
+}
+
+.rapport-employe-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+/* GRID STATISTIQUES */
+.stats-grid-employe {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* GRAPHIQUES */
+.charts-grid-employe {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/* SECTIONS TABLEAUX */
+.section-block-employe {
+  margin-bottom: 32px;
+  padding: 16px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* BOUTON IMPRESSION */
+.print-btn-employe {
+  background: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.print-btn-employe:hover {
+  background: #1e4fc7;
+}
+
+/* ============================
+   MEDIA QUERIES
+   ============================ */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .stats-grid-employe {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-grid-employe {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .rapport-employe-title {
+    font-size: 26px;
+  }
+
+  .stats-grid-employe {
+    grid-template-columns: 1fr;
+  }
+
+  .section-block-employe {
+    padding: 12px;
+  }
+}

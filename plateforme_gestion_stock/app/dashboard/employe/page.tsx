@@ -1,5 +1,16 @@
-import DashboardEmploye from "@/app/components/Dashboard_employe";
+"use client";
 
-export default function Page() {
-  return <DashboardEmploye />;
+import DashboardEmploye from "@/app/components/dashboard-employe/Dashboard_employe";
+
+export default function Page(){
+   
+  return(
+
+    <div>
+        
+        <DashboardEmploye/>
+        
+    </div>
+  );
+  
 }

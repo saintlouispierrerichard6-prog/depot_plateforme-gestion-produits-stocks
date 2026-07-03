@@ -1,5 +1,12 @@
-import DashboardGestionnaire from "@/app/components/Dashboard_gestionnaire";
+"use client";
+import DashboardGestionnaire from "@/app/components/dashboard-gestionnaire/Dashboard_gestionnaire";
 
-export default function Page() {
-  return <DashboardGestionnaire />;
+export default function AfficherDashboard(){
+
+  return(
+
+     <div>
+         <DashboardGestionnaire/>
+     </div>
+  );
 }
