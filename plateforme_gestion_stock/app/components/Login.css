@@ -1,53 +1,53 @@
-/* Container principal */
+/* Container global */
 .login-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0f172a; /* slate-950 */
-  padding: 20px;
+  background: #f1f5f9; /* slate-100 */
+  padding: 40px 20px;
 }
 
 /* Card */
 .login-card {
   width: 100%;
   max-width: 420px;
-  background: #1e293b; /* slate-900 */
+  background: #ffffff;
   padding: 32px;
   border-radius: 16px;
-  border: 1px solid #334155; /* slate-800 */
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border: 1px solid #e2e8f0; /* slate-200 */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* Titre */
+/* Title */
 .login-title {
-  color: white;
-  font-size: 1.6rem;
+  color: #0f172a;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-/* Sous-texte */
+/* Subtitle */
 .login-subtitle {
-  color: #94a3b8; /* slate-400 */
+  color: #475569;
   font-size: 0.9rem;
   margin-bottom: 24px;
 }
 
 /* Label */
 .login-label {
-  color: #cbd5e1; /* slate-300 */
+  color: #334155;
   font-size: 0.85rem;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
   display: block;
 }
 
 /* Input */
 .login-input {
   width: 100%;
-  background: #0f172a; /* slate-800 */
-  border: 1px solid #334155;
-  color: white;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
   padding: 10px 12px;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -55,36 +55,36 @@
 }
 
 .login-input:focus {
-  border-color: #3b82f6; /* blue-500 */
-  outline: none;
+  border-color: #3b82f6;
   box-shadow: 0 0 0 2px rgba(59,130,246,0.3);
 }
 
-/* Bouton */
+/* Button */
 .login-btn {
   width: 100%;
-  background: #2563eb; /* blue-600 */
+  background: #2563eb;
   color: white;
   padding: 12px;
   border-radius: 8px;
   font-size: 0.95rem;
   font-weight: 500;
-  margin-top: 10px;
-  transition: 0.2s;
+  margin-top: 14px;
+  transition: 0.25s;
   border: none;
 }
 
 .login-btn:hover {
-  background: #1d4ed8; /* blue-700 */
-  transform: scale(1.02);
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
-/* Message d'erreur */
+/* Error message */
 .error-text {
-  color: #f87171; /* red-400 */
+  color: #dc2626;
   font-size: 0.8rem;
   margin-top: 4px;
 }
+
 
 /* MEDIA QUERIES */
 
