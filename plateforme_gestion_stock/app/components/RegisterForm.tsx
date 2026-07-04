@@ -29,169 +29,170 @@ export default function RegistrationForm() {
   const password = watch("password");
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="space-y-4 bg-slate-900 p-6 rounded-xl border border-slate-800"
-    >
-      <h2 className="text-xl font-semibold text-white">Inscription</h2>
+    <div className="register-container">
+      <form onSubmit={handleSubmit(onSubmit)} className="register-card">
 
-      {/* Nom */}
-      <div>
-        <label className="text-slate-300 text-sm">Nom</label>
-        <input
-          className="w-full bg-slate-800 border border-slate-700 text-white px-3 py-2 rounded-lg mt-1"
-          {...register("nom", {
-            required: "Nom obligatoire",
-            pattern: {
-              value: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/,
-              message: "Nom invalide",
-            },
-          })}
-          onBlur={() => trigger("nom")}
-        />
-        {errors.nom && <p className="text-red-400">{errors.nom.message}</p>}
-      </div>
+        <h2 className="register-title">Inscription</h2>
+        <p className="register-subtitle">Créer votre compte employé</p>
 
-      {/* Prénom */}
-      <div>
-        <label className="text-slate-300 text-sm">Prénom</label>
-        <input
-          className="w-full bg-slate-800 border border-slate-700 text-white px-3 py-2 rounded-lg mt-1"
-          {...register("prenom", {
-            required: "Prénom obligatoire",
-            pattern: {
-              value: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/,
-              message: "Prénom invalide",
-            },
-          })}
-          onBlur={() => trigger("prenom")}
-        />
-        {errors.prenom && (
-          <p className="text-red-400">{errors.prenom.message}</p>
-        )}
-      </div>
+        <div className="register-grid">
 
-      {/* Adresse */}
-      <div>
-        <label className="text-slate-300 text-sm">Adresse</label>
-        <input
-          className="w-full bg-slate-800 border border-slate-700 text-white px-3 py-2 rounded-lg mt-1"
-          {...register("adresse", {
-            required: "Adresse obligatoire",
-            pattern: {
-              value: /^[A-Za-z0-9À-ÖØ-öø-ÿ\s,'-]+$/,
-              message: "Adresse invalide",
-            },
-          })}
-          onBlur={() => trigger("adresse")}
-        />
-        {errors.adresse && (
-          <p className="text-red-400">{errors.adresse.message}</p>
-        )}
-      </div>
+          {/* Nom */}
+          <div>
+            <label className="register-label">Nom</label>
+            <input
+              className="register-input"
+              {...register("nom", {
+                required: "Nom obligatoire",
+                pattern: {
+                  value: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/,
+                  message: "Nom invalide",
+                },
+              })}
+              onBlur={() => trigger("nom")}
+            />
+            {errors.nom && <p className="error-text">{errors.nom.message}</p>}
+          </div>
 
-      {/* Email */}
-      <div>
-        <label className="text-slate-300 text-sm">Email</label>
-        <input
-          type="email"
-          className="w-full bg-slate-800 border border-slate-700 text-white px-3 py-2 rounded-lg mt-1"
-          {...register("email", {
-            required: "Email obligatoire",
-            pattern: {
-              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
-              message: "Format email invalide",
-            },
-          })}
-          onBlur={() => trigger("email")}
-        />
-        {errors.email && (
-          <p className="text-red-400">{errors.email.message}</p>
-        )}
-      </div>
+          {/* Prénom */}
+          <div>
+            <label className="register-label">Prénom</label>
+            <input
+              className="register-input"
+              {...register("prenom", {
+                required: "Prénom obligatoire",
+                pattern: {
+                  value: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/,
+                  message: "Prénom invalide",
+                },
+              })}
+              onBlur={() => trigger("prenom")}
+            />
+            {errors.prenom && (
+              <p className="error-text">{errors.prenom.message}</p>
+            )}
+          </div>
 
-      {/* Créer mot de passe */}
-      <div>
-        <label className="text-slate-300 text-sm">Créer mot de passe</label>
-        <input
-          type="password"
-          className="w-full bg-slate-800 border border-slate-700 text-white px-3 py-2 rounded-lg mt-1"
-          {...register("password", {
-            required: "Mot de passe obligatoire",
-            pattern: {
-              value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
-              message: "Min 8 caractères, 1 maj, 1 min, 1 chiffre",
-            },
-          })}
-          onBlur={() => trigger("password")}
-        />
-        {errors.password && (
-          <p className="text-red-400">{errors.password.message}</p>
-        )}
-      </div>
+          {/* Adresse */}
+          <div>
+            <label className="register-label">Adresse</label>
+            <input
+              className="register-input"
+              {...register("adresse", {
+                required: "Adresse obligatoire",
+                pattern: {
+                  value: /^[A-Za-z0-9À-ÖØ-öø-ÿ\s,'-]+$/,
+                  message: "Adresse invalide",
+                },
+              })}
+              onBlur={() => trigger("adresse")}
+            />
+            {errors.adresse && (
+              <p className="error-text">{errors.adresse.message}</p>
+            )}
+          </div>
 
-      {/* Confirmer mot de passe */}
-      <div>
-        <label className="text-slate-300 text-sm">Confirmer mot de passe</label>
-        <input
-          type="password"
-          className="w-full bg-slate-800 border border-slate-700 text-white px-3 py-2 rounded-lg mt-1"
-          {...register("confirmPassword", {
-            required: "Confirmation obligatoire",
-            validate: (value) =>
-              value === password || "Les mots de passe ne correspondent pas",
-          })}
-          onBlur={() => trigger("confirmPassword")}
-        />
-        {errors.confirmPassword && (
-          <p className="text-red-400">{errors.confirmPassword.message}</p>
-        )}
-      </div>
+          {/* Email */}
+          <div>
+            <label className="register-label">Email</label>
+            <input
+              type="email"
+              className="register-input"
+              {...register("email", {
+                required: "Email obligatoire",
+                pattern: {
+                  value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                  message: "Format email invalide",
+                },
+              })}
+              onBlur={() => trigger("email")}
+            />
+            {errors.email && (
+              <p className="error-text">{errors.email.message}</p>
+            )}
+          </div>
 
-      {/* Département */}
-      <div>
-        <label className="text-slate-300 text-sm">Département</label>
-        <input
-          className="w-full bg-slate-800 border border-slate-700 text-white px-3 py-2 rounded-lg mt-1"
-          {...register("departement", {
-            required: "Département obligatoire",
-            pattern: {
-              value: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/,
-              message: "Département invalide",
-            },
-          })}
-          onBlur={() => trigger("departement")}
-        />
-        {errors.departement && (
-          <p className="text-red-400">{errors.departement.message}</p>
-        )}
-      </div>
+          {/* Mot de passe */}
+          <div>
+            <label className="register-label">Créer mot de passe</label>
+            <input
+              type="password"
+              className="register-input"
+              {...register("password", {
+                required: "Mot de passe obligatoire",
+                pattern: {
+                  value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/,
+                  message: "Min 8 caractères, 1 maj, 1 min, 1 chiffre",
+                },
+              })}
+              onBlur={() => trigger("password")}
+            />
+            {errors.password && (
+              <p className="error-text">{errors.password.message}</p>
+            )}
+          </div>
 
-      {/* Poste matricule */}
-      <div>
-        <label className="text-slate-300 text-sm">Poste matricule</label>
-        <input
-          className="w-full bg-slate-800 border border-slate-700 text-white px-3 py-2 rounded-lg mt-1"
-          {...register("matricule", {
-            required: "Matricule obligatoire",
-            pattern: {
-              value: /^\d+$/,
-              message: "Matricule doit être numérique",
-            },
-          })}
-          onBlur={() => trigger("matricule")}
-        />
-        {errors.matricule && (
-          <p className="text-red-400">{errors.matricule.message}</p>
-        )}
-      </div>
+          {/* Confirmer mot de passe */}
+          <div>
+            <label className="register-label">Confirmer mot de passe</label>
+            <input
+              type="password"
+              className="register-input"
+              {...register("confirmPassword", {
+                required: "Confirmation obligatoire",
+                validate: (value) =>
+                  value === password || "Les mots de passe ne correspondent pas",
+              })}
+              onBlur={() => trigger("confirmPassword")}
+            />
+            {errors.confirmPassword && (
+              <p className="error-text">{errors.confirmPassword.message}</p>
+            )}
+          </div>
 
-      <button
-        type="submit"
-        className="w-full bg-blue-600 hover:bg-blue-500 text-white py-2 rounded-lg"
-      >
-        S’inscrire
-      </button>
-    </form>
+          {/* Département */}
+          <div>
+            <label className="register-label">Département</label>
+            <input
+              className="register-input"
+              {...register("departement", {
+                required: "Département obligatoire",
+                pattern: {
+                  value: /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/,
+                  message: "Département invalide",
+                },
+              })}
+              onBlur={() => trigger("departement")}
+            />
+            {errors.departement && (
+              <p className="error-text">{errors.departement.message}</p>
+            )}
+          </div>
+
+          {/* Matricule */}
+          <div>
+            <label className="register-label">Poste matricule</label>
+            <input
+              className="register-input"
+              {...register("matricule", {
+                required: "Matricule obligatoire",
+                pattern: {
+                  value: /^\d+$/,
+                  message: "Matricule doit être numérique",
+                },
+              })}
+              onBlur={() => trigger("matricule")}
+            />
+            {errors.matricule && (
+              <p className="error-text">{errors.matricule.message}</p>
+            )}
+          </div>
+        </div>
+
+        <button type="submit" className="register-btn">
+          S’inscrire
+        </button>
+      </form>
+    </div>
   );
 }
